@@ -30,4 +30,4 @@ jobs:
 
     - name: Publish the package to GitHub Packages
       run: |
-        nuget push ./bin/Release/*.nupkg -Source "GPR" -SkipDuplicate
+        nuget push ./bin/Release/*.nupkg -SkipDuplicate
