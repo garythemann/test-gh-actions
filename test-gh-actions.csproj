@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>test_gh_actions</RootNamespace>
-    <PackageId>GM.TestGHActions</PackageId>
+    <PackageId>Garythemann.TestGHActions</PackageId>
     <Version>0.1.0</Version>
   </PropertyGroup>
 
