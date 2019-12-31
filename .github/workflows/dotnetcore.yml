@@ -30,5 +30,4 @@ jobs:
 
     - name: Publish the package to GitHub Packages
       run: |
-        nuget source add -Name "GPR" -Source https://nuget.pkg.github.com/${{ github.actor }}/index.json -UserName ${{ github.actor }} -Password ${{ secrets.GITHUB_TOKEN }}
         nuget push ./bin/Release/*.nupkg -Source "GPR" -SkipDuplicate
