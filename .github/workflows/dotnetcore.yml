@@ -4,10 +4,10 @@ on: [push]
 
 jobs:
   publish:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: actions/setup-dotnet@b7821147f564527086410e8edd122d89b4b9602f
+    - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
         source-url: https://nuget.pkg.github.com/garythemann/index.json
@@ -30,4 +30,5 @@ jobs:
 
     - name: Publish the package to GitHub Packages
       run: |
-        nuget push ./bin/Release/*.nupkg -SkipDuplicate
+        nuget source add -Name "GPR" -Source https://nuget.pkg.github.com/${{ github.actor }}/index.json -UserName ${{ github.actor }} -Password ${{ secrets.GITHUB_TOKEN }}
+        nuget push .\bin\Release\*.nupkg -Source "GPR" -SkipDuplicate
