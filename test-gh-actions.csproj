@@ -5,6 +5,7 @@
     <RootNamespace>test_gh_actions</RootNamespace>
     <PackageId>Garythemann.TestGHActions</PackageId>
     <Version>0.1.0</Version>
+    <RepositoryUrl>https://github.com/garythemann/test-gh-actions</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
